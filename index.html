@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/music-icon-music-tone-flat-symbol-design-isolated-on-white-background-free-vector-removebg-preview.png" type="image/x-icon">
+    <title>MarinaHeardle</title>
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+
+     <header>
+        <div class="titulo">
+            <h1>MARINA Heardle</h1>
+        </div>
+
+        <div class="linha">
+        </div>
+        
+     </header>
+     <main>
+
+        
+
+        <div class="tela-r_correta1" id="aaa">
+            <iframe width="200" height="200" src="https://youtube.com/embed/W5u3kP85LYI?si=uClDC-CdSE6GtQpq" frameborder="0" allow="accelerometer"; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+            <h4 class="parabens">Parabéns!</h4>
+            <h5 class="rsp-correta">Purge the Poison - MARINA</h5>
+            <div class="quadradinhos">
+                <div class="q1"></div>
+                <div class="q2"></div>
+                <div class="q3"></div>
+                <div class="q4"></div>
+            </div>
+            <img class="autism-happy" src="imagens/yippee-creature-autism-creature.gif" alt="">
+       
+        </div>
+
+
+        <div class="caixas">
+            <div class="caixa1"></div>
+            <div class="caixa2"></div>
+            <div class="caixa3"></div>
+            <div class="caixa4"></div>
+        </div>
+
+        <button class="buttonp" id="playButton">
+            <img src="imagens/Captura_de_tela_2025-04-07_223522-removebg-preview.png" alt="" id="icone">
+        </button>
+        <div class="skipbuttons">
+            <button class="button" id="skipButton" style="font-family: fonte-marina, sans-serif; font-size: 15px;" disabled >Skip +2s</button>
+            <button class="button2" id="skipButton2" style="font-family: fonte-marina, sans-serif; font-size: 15px;" disabled >Skip +4s</button>
+            <button class="button3" id="skipButton3" style="font-family: fonte-marina, sans-serif; font-size: 15px;" disabled >Skip +8s</button>
+        </div>
+
+        <div>
+            <audio src="musics/purge the poison - trecho1.mp3" id="audio"></audio>
+            <audio src="musics/purge the poison - trecho2.mp3" id="audio2"></audio>
+            <audio src="musics/purge the poison - trecho3.mp3" id="audio3"></audio>
+            <audio src="musics/purge the poison - trecho4.mp3" id="audio4"></audio>
+            <audio src="musics/purge the poison - full.mp3" id="audio5"></audio>
+        </div>
+
+        <progress class="progressbar" id="barraProgresso" value="0" max="50" style="border: 0px;"></progress>
+
+        <input type="text" onkeyup="mostrarMenu()" class="typebox_resposta" id="typebox" placeholder="Procure a música e selecione seu palpite" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <button class="enter" id="enter" style="font-family: fonte-marina, sans-serif; font-size: 20px;" onclick="enviarOpcao()">Enter</button>
+
+        <div class="musicTimer">
+            <span class="currentTime">00:00</span>
+            <span class="duration">00:00</span>
+        </div>
+
+        <ul id="menu" class="menu">
+        </ul>
+        
+
+
+     </main>
+     <footer></footer>
+</body>
+</html>

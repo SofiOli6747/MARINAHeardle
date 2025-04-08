@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'fonte-marina'; /* Nome da fonte */
+    src: url('Fonts/Ashley\ Script\ MT\ Std\ Regular.otf') format('opentype'); /* Caminho para o arquivo OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fonte-marina2'; /* Nome da fonte */
+    src: url('Fonts/CooperFiveOpti-Black.otf') format('opentype'); /* Caminho para o arquivo OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    background: linear-gradient(to right, #4B93AD, #c3b964);
+    background-color:rgb(75, 147, 173);
+    font-family: 'fonte-marina', sans-serif;
+}
+
+
+.titulo{
+    color: aliceblue;
+    position: absolute;
+    top: 10px;
+    left: 625px;
+}
+
+.linha{
+    padding: 0.5px;
+    background-color: azure;
+    width: 600px;
+    position: absolute;
+    top: 80px;
+    left: 450px;
+}
+
+
+
+
+.caixas{
+    position: absolute;
+    top: 120px;
+    left: 530px;
+}
+
+
+.caixa1{
+    padding: 15px;
+    border: solid 3px;
+    border-color: azure;
+    opacity: 80%;
+    width: 400px;
+}
+
+.caixa2{
+    padding: 15px;
+    border: solid 3px;
+    border-color: azure;
+    opacity: 80%;
+    width: 400px;
+    position: relative;
+    top: 10px;
+}
+
+.caixa3{
+    padding: 15px;
+    border: solid 3px;
+    border-color: azure;
+    opacity: 80%;
+    width: 400px;
+    position: relative;
+    top: 20px;
+}
+
+.caixa4{
+    padding: 15px;
+    border: solid 3px;
+    border-color: azure;
+    opacity: 80%;
+    width: 400px;
+    position: relative;
+    top: 30px;
+}
+
+
+
+
+
+.progressbar{
+    border-radius: none;
+    width: 40%;
+    height: 25px;
+    position: absolute;
+    top: 450px;
+    left: 450px;
+}
+.progressbar::-webkit-progress-value{
+    transition: width 0.5s ease-in-out;
+}
+
+
+
+.buttonp{
+    font-family: 'fonte-marina', sans-serif;
+    cursor: pointer;
+    border: none;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 470px;
+    left: 705px;
+    transition: all 0.3s ease;
+}
+
+.button2{
+    cursor:not-allowed;
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    background-color: rgb(54, 91, 54);
+    color: white;
+    opacity: 40%;
+}
+
+
+.button3{
+    cursor:not-allowed;
+    position: absolute;
+    top: 15px;
+    left: 190px;
+    background-color: rgb(54, 91, 54);
+    color: white;
+    opacity: 40%;
+}
+
+.button4{
+    cursor:not-allowed;
+    position: absolute;
+    top: 25px;
+    left: 280px;
+    background-color: peru;
+    opacity: 50%;
+}
+
+
+.button{
+    cursor:not-allowed;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    background-color: rgb(54, 91, 54);
+    color: white;
+    opacity: 40%;
+}
+
+.skipbuttons{
+    position: absolute;
+    top: 620px;
+    left: 460px;
+
+}
+
+.skipbuttons:hover{
+    cursor: pointer;
+}
+
+
+
+
+.currentTime{
+    position: absolute;
+    top: 500px;
+    left: 450px;
+    color:aliceblue;
+}
+
+.duration{
+    position: absolute;
+    top: 500px;
+    left: 1020px;
+    color:aliceblue;
+}
+
+
+
+
+.typebox_resposta{
+    background-color: rgb(205, 246, 246);
+    border: solid 5px;
+    border-color: darkseagreen;
+    width: 600px;
+    height: 40px;
+    position: absolute;
+    left: 450px;
+    top: 555px;
+}
+.typebox_resposta:focus{
+    border-color: rgb(180, 219, 180) ;
+}
+.typebox_resposta:hover{
+    cursor: url('https://cdn-icons-png.flaticon.com/512/25/25231.png'), auto;
+} 
+
+.typebox_resposta::placeholder{
+    color: rgb(70, 64, 64);
+    opacity: 50%;
+}
+
+.enter{
+    height: 40px;
+    width: 80px;
+    border: none;
+    background-color: rgb(255, 255, 177);
+    position: absolute;
+    top: 630px;
+    left: 1000px;
+}
+
+.enter:hover{
+    background-color: rgb(231, 231, 150);
+    cursor: pointer;
+}
+
+
+
+.box-menu{
+    display: none;
+    padding: 200px;
+    width: 215px;
+    height: 10px;
+    position: absolute;
+    top: 150px;
+    left: 450px;
+    background-color: rgb(49, 65, 65);
+}
+
+.menu{
+    display: none;
+    border: solid 2px;
+    border-color: #bbc07f;
+}
+
+.grupoOpcao {
+
+    margin-bottom: 10px;
+}
+
+.grupoOpcao h4 {
+ 
+    margin: 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+.grupoOpcao div {
+    padding: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.grupoOpcao div:hover {
+    background-color: #f9f9f9;
+}
+
+
+ul{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 450px;
+    top: 460px;
+    padding: 20px;
+    width: 575px;
+    background-color: rgb(49, 65, 65);
+    color: white;
+    list-style-type: none;
+}
+
+
+.tela-r_correta1{
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 440px;
+    z-index: 1;
+    padding: 200px;
+    width: 280px;
+    height: 200px;
+    background-color: rgb(76, 91, 91);
+    transition: all 0.5s ease-in;
+    border: solid 2px;
+    border-color: #818650;
+}
+
+iframe{
+    position: absolute;
+    top: 100px;
+    left: 230px;
+}
+
+.parabens{
+    font-family: 'fonte-marina2', sans-serif;;
+    font-size: 40px;
+    position: absolute;
+    top: -30px;
+    left: 220px;
+    color: #b5ba74;
+}
+
+.rsp-correta{
+    color: #8e9ba0;
+    opacity: 80%;
+    font-size: 20px;
+    position: absolute;
+    top: 290px;
+    left: 233px;
+}
+
+.quadradinhos{
+    position: absolute;
+    top: 400px;
+    left: 280px;
+}
+
+.q1{
+    padding: 10px;
+    background-color: black;
+    width: 1px;
+    border: solid 1px;
+    border-color: #7d898e;
+    position: absolute;
+    top: 43px;
+    left: 1px;
+}
+.q2{
+    padding: 10px;
+    background-color: black;
+    width: 1px;
+    border: solid 1px;
+    border-color: #7d898e;
+    position: absolute;
+    left: 30px;
+    top: 43px;
+}
+.q3{
+    padding: 10px;
+    background-color: black;
+    width: 1px;
+    border: solid 1px;
+    border-color: #7d898e;
+    position: absolute;
+    left: 60px;
+    top: 43px;
+}
+.q4{
+    padding: 10px;
+    background-color: black;
+    width: 1px;
+    border: solid 1px;
+    border-color: #7d898e;
+    position: absolute;
+    left: 90px;
+    top: 43px;
+}
+
+.autism-happy{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 500px;
+    left: 600px;
+}
