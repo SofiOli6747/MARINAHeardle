@@ -23,29 +23,46 @@
      </header>
      <main>
 
-        
-
-        <div class="tela-r_correta1" id="aaa">
+    
+        <div class="tela-r_correta1" id="a">
             <iframe width="200" height="200" src="https://youtube.com/embed/W5u3kP85LYI?si=uClDC-CdSE6GtQpq" frameborder="0" allow="accelerometer"; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
             </iframe>
             <h4 class="parabens">Parabéns!</h4>
             <h5 class="rsp-correta">Purge the Poison - MARINA</h5>
-            <div class="quadradinhos">
-                <div class="q1"></div>
-                <div class="q2"></div>
-                <div class="q3"></div>
-                <div class="q4"></div>
+            <div class="quadradinhos" id="squares">
+                <div class="q1" id="q1"></div>
+                <div class="q2" id="q2"></div>
+                <div class="q3" id="q3"></div>
+                <div class="q4" id="q4"></div>
             </div>
             <img class="autism-happy" src="imagens/yippee-creature-autism-creature.gif" alt="">
        
         </div>
+        
+        <div class="tela-r_errada" id="aa"></div>
 
 
-        <div class="caixas">
-            <div class="caixa1"></div>
-            <div class="caixa2"></div>
-            <div class="caixa3"></div>
-            <div class="caixa4"></div>
+        <div class="caixas" id="caixas">
+            <div class="caixa1" id="caixa1" data-index="1">
+                <div class="i-q1" id="i-q1">
+                    <img src="imagens/quadrado.png" alt="" id="img1">
+                </div>
+            </div>
+            <div class="caixa2" id="caixa2" data-index="2">
+                <div class="i-q2" id="i-q2">
+                    <img src="imagens/quadrado.png" alt="" id="img2">
+                </div>
+            </div>
+            <div class="caixa3"id="caixa3" data-index="3">
+                <div class="i-q3">
+                    <img src="imagens/quadrado.png" alt="" id="img3">
+                </div>
+            </div>
+            <div class="caixa4"id="caixa4" data-index="4">
+                <div class="i-q4">
+                    <img src="imagens/quadrado.png" alt="" id="img4">
+                </div>
+            </div>
         </div>
 
         <button class="buttonp" id="playButton">
@@ -57,6 +74,7 @@
             <button class="button3" id="skipButton3" style="font-family: fonte-marina, sans-serif; font-size: 15px;" disabled >Skip +8s</button>
         </div>
 
+        <!--trechos musicas-->
         <div>
             <audio src="musics/purge the poison - trecho1.mp3" id="audio"></audio>
             <audio src="musics/purge the poison - trecho2.mp3" id="audio2"></audio>
@@ -68,7 +86,7 @@
         <progress class="progressbar" id="barraProgresso" value="0" max="50" style="border: 0px;"></progress>
 
         <input type="text" onkeyup="mostrarMenu()" class="typebox_resposta" id="typebox" placeholder="Procure a música e selecione seu palpite" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-        <button class="enter" id="enter" style="font-family: fonte-marina, sans-serif; font-size: 20px;" onclick="enviarOpcao()">Enter</button>
+        <button class="enter" id="enter" style="font-family: fonte-marina, sans-serif; font-size: 20px;" onclick="enviarOpcao()" >Enter</button>
 
         <div class="musicTimer">
             <span class="currentTime">00:00</span>
@@ -78,7 +96,18 @@
         <ul id="menu" class="menu">
         </ul>
         
+        <div class="txt-retangulo1" id="txt-r1">
+            <span></span>
+        </div>
 
+        <div class="txt-retangulo2" id="txt-r2">
+            <span></span>
+        </div>
+
+        <div class="quadradinho2" id="squares2">
+
+
+         </div>
 
      </main>
      <footer></footer>
