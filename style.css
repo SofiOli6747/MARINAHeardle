@@ -403,6 +403,49 @@ iframe{
 
 .tela-r_errada{
     display: none;
-    padding: 10px;
-    background-color: #4B93AD;
+    position: fixed;
+    top: 40px;
+    left: 440px;
+    z-index: 1;
+    padding: 200px;
+    width: 280px;
+    height: 200px;
+    background-color: rgb(76, 91, 91);
+    transition: all 0.5s ease-in;
+    border: solid 2px;
+    border-color: #818650;
+}
+
+.yt2{
+    position: absolute;
+    top: 90px;
+}
+
+.autism-sad{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 280px;
+}
+
+.shadow-o-ouriço{
+    width: 60px;
+    position: absolute;
+    top: 35px;
+    left: 140px;
+}
+
+.txtR{
+    font-size: 30px;
+    position: absolute;
+    top: 320px;
+    left: 200px;
+}
+
+.txtRF{
+    font-size: 30px;
+    position: absolute;
+    left: 220px;
+    top: 320px;
+    color: #a8af67;
 }

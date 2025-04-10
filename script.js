@@ -443,11 +443,53 @@ const A = document.getElementById("enter").addEventListener('click', function() 
 const B = document.getElementById("skipButton").addEventListener('click', function() {});
 
 let contador = 0;
-let seleção = 0;
 
 function exibirTelaDeSucesso(params) {
-  const telaSucesso = document.getElementById('a');
-  telaSucesso.style.display = 'block';  // Exibe a tela de sucesso
+  // itera em cima de cada quadrado, baseado na quantidade de tentativas (contador)
+    for (var i = 1; i <= contador; i++) {
+    // pega um dos quadrados q1, q2... qcontador, baseado na iteração (i) atual
+        var quadrado = document.getElementById("q" + i);
+    
+    // altera o css "backgroundColor" do elemento selecionado
+        quadrado.style.backgroundColor = "black";
+    }
+
+    // acessa o último quadrado
+    var quadrado = document.getElementById("q" + contador);
+    // pinta ele de verde
+    quadrado.style.backgroundColor = "green";
+
+    if (document.getElementById("q1").style.backgroundColor ===  'green'){
+      const txt_result = document.getElementById('txt-result')
+      txt_result.textContent = 'Certificado #0 Marina Fã' 
+      txt_result.style.color = '#4B93AD'
+    }
+    if (document.getElementById("q2").style.backgroundColor ===  'green'){
+      const txt_result = document.getElementById('txt-result')
+      txt_result.textContent = 'Marina Fã' 
+      txt_result.style.color = '#818650'
+      txt_result.style.position = 'absolute';
+      txt_result.style.left =  '272px';
+    }
+    if (document.getElementById("q3").style.backgroundColor ===  'green'){
+      const txt_result = document.getElementById('txt-result')
+      txt_result.textContent = 'Fã médio' 
+      txt_result.style.color = '#D5CEA6'
+      txt_result.style.position = 'absolute';
+      txt_result.style.left =  '290px';
+    }
+    if (document.getElementById("q4").style.backgroundColor ===  'green'){
+      const txt_result = document.getElementById('txt-result')
+      txt_result.textContent = 'já escutou vez ou outra' 
+      txt_result.style.color = '#B0B6B8'
+      txt_result.style.position = 'absolute';
+      txt_result.style.left =  '225px';
+    }
+
+
+    const telaSucesso =
+        document.getElementById("a");
+    telaSucesso.style.display = "block"; // Exibe a tela de sucesso
 }
 
 function mostrarOpcao(tipoBotao) {
