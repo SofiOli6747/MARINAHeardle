@@ -106,16 +106,22 @@ body{
 
 
 .buttonp{
+    all: unset;
     font-family: 'fonte-marina', sans-serif;
     cursor: pointer;
     border: none;
     height: 0px;
     width: 0px;
     position: absolute;
-    top: 470px;
-    left: 705px;
+    top: 500px;
+    left: 725px;
     transition: all 0.3s ease;
 }
+
+.bplay{
+    width: 40px;
+}
+
 
 .button2{
     width: 70px;
@@ -210,6 +216,8 @@ body{
     width: 80px;
     border: none;
     background-color: rgb(255, 255, 177);
+    border: solid 5px;
+    border-color: rgb(107, 150, 107);
     position: absolute;
     top: 630px;
     left: 1000px;
@@ -304,7 +312,7 @@ iframe{
     font-size: 20px;
     position: absolute;
     top: 290px;
-    left: 233px;
+    left: 250px;
 }
 
 .quadradinhos{

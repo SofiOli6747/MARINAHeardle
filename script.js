@@ -8,13 +8,13 @@ function mudarIcone() {
 
 
   // Altera a imagem dependendo da imagem atual
-  if (icone.src.includes("imagens/Captura_de_tela_2025-04-07_223522-removebg-preview.png")) {
-      icone.src = "imagens/image-removebg-preview.png"; // Troca para a segunda imagem
+  if (icone.src.includes("imagens/botao-play.png")) {
+      icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
   } else {
-      icone.src = "imagens/Captura_de_tela_2025-04-07_223522-removebg-preview.png"; // Troca de volta para a primeira imagem
+      icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
   }
   audio.onended = function() {
-    icone.src = "imagens/Captura_de_tela_2025-04-07_223522-removebg-preview.png";
+    icone.src = "imagens/botao-play.png";
   }
 }
 
@@ -51,9 +51,12 @@ const barraProgresso = document.getElementById('barraProgresso');
 const audio = document.getElementById('audio');
 
 audio.addEventListener('timeupdate', function() {
-  const progresso = (audio.currentTime / audio.duration) * 50;
+  const progresso = (audio.currentTime / audio.duration) * 60;
   barraProgresso.value = progresso;
+  barraProgresso.style.width = audio.duration;
 });
+
+
 
 const currentTime = document.querySelector(".currentTime")
 const duration = document.querySelector(".duration")
@@ -110,7 +113,7 @@ document.getElementById("skipButton").addEventListener('click', function() {
 const audio2 = document.getElementById('audio2');
 
 audio2.addEventListener('timeupdate', function() {
-  const progresso = (audio2.currentTime / audio2.duration) * 50;
+  const progresso = (audio2.currentTime / audio2.duration) * 55;
   barraProgresso.value = progresso;
 });
 
@@ -163,7 +166,7 @@ document.getElementById("skipButton2").addEventListener('click', function() {
 const audio3 = document.getElementById('audio3');
 
 audio3.addEventListener('timeupdate', function() {
-  const progresso = (audio3.currentTime / audio3.duration) * 50;
+  const progresso = (audio3.currentTime / audio3.duration) * 53;
   barraProgresso.value = progresso;
 });
 
@@ -219,6 +222,9 @@ audio4.addEventListener('timeupdate', function() {
   barraProgresso.value = progresso;
 });
 
+audio4.addEventListener('ended', () => {
+  barraProgresso.value = 0;
+})
 
 
 audio4.ontimeupdate = () => updateTime();
@@ -264,7 +270,7 @@ function updateTime() {
 const txt_r1 = document.getElementById('txt-r1');
 const txt_r2 = document.getElementById('txt-r2');
 
-const opcaoCorreta = 'Purge the Poison';
+const opcaoCorreta = 'Shampain';
 
 let opcaoSelecionada = "";
 
@@ -426,6 +432,7 @@ function mostrarMenu() {
                 menuOpcoes.style.display = 'none'; // Fecha o menu
             };
 
+
             grupoDiv.appendChild(opcaoDiv);
           });
 
@@ -440,7 +447,7 @@ function mostrarMenu() {
 }
 
 const A = document.getElementById("enter").addEventListener('click', function() { });
-const B = document.getElementById("skipButton").addEventListener('click', function() {});
+//const B = document.getElementById("skipButton").addEventListener('click', function() {});
 
 let contador = 0;
 
@@ -490,7 +497,11 @@ function exibirTelaDeSucesso(params) {
     const telaSucesso =
         document.getElementById("a");
     telaSucesso.style.display = "block"; // Exibe a tela de sucesso
+
+
+
 }
+
 
 function mostrarOpcao(tipoBotao) {
   contador++;
@@ -502,16 +513,32 @@ function mostrarOpcao(tipoBotao) {
     document.getElementById("caixa" + contador).innerHTML += valorSelecionado;
   } 
 
-  if (contador >= 4 && (document.getElementById("caixa4").innerHTML != valorSelecionado)) {
+  if (contador >= 4 && (document.getElementById("caixa4").innerHTML !== valorSelecionado)) {
     const telaFracasso = document.getElementById('aa');
     telaFracasso.style.display = 'block';
 }
 
 }
-
+function mostrarOpcao2()  {
+  const inputTexto = document.getElementById('typebox');
+  if(inputTexto.value === opcaoCorreta){
+    const telaSucesso = document.getElementById("a");
+    telaSucesso.style.display = "block";
+  }
+  
+}
+function mostrarOpcao3(params) {
+  if(contador >= 4 && (document.getElementById("caixa" + contador).innerHTML += 'Skipped')){
+    const telaFracasso = document.getElementById('aa');
+    telaFracasso.style.display = 'block';
+  }
+}
 
 function enviarOpcao(params) {
+  mostrarOpcao3();
+  mostrarOpcao2();
   mostrarOpcao();
+
   var imagem = document.getElementById('img1')
 
   if (opcaoSelecionada === opcaoCorreta){
