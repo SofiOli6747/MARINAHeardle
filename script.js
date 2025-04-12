@@ -51,7 +51,7 @@ const barraProgresso = document.getElementById('barraProgresso');
 const audio = document.getElementById('audio');
 
 audio.addEventListener('timeupdate', function() {
-  const progresso = (audio.currentTime / audio.duration) * 60;
+  const progresso = (audio.currentTime / audio.duration) * 75;
   barraProgresso.value = progresso;
   barraProgresso.style.width = audio.duration;
 });
@@ -108,12 +108,25 @@ document.getElementById("skipButton").addEventListener('click', function() {
   document.getElementById("caixa" + contador).innerHTML += 'Skipped';
   document.getElementById('img' + contador).src = 'imagens/barra.png';
 
+  const icone = document.getElementById("icone");
+
+  // Altera a imagem dependendo da imagem atual
+  if (icone.src.includes("imagens/botao-play.png")) {
+      icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
+  } else {
+      icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
+  }
+  audio2.onended = function() {
+    icone.src = "imagens/botao-play.png";
+  }
+
+
 });
 
 const audio2 = document.getElementById('audio2');
 
 audio2.addEventListener('timeupdate', function() {
-  const progresso = (audio2.currentTime / audio2.duration) * 55;
+  const progresso = (audio2.currentTime / audio2.duration) * 60;
   barraProgresso.value = progresso;
 });
 
@@ -158,6 +171,19 @@ document.getElementById("skipButton2").addEventListener('click', function() {
 
   document.getElementById("caixa" + contador).innerHTML += 'Skipped';
   document.getElementById('img' + contador).src = 'imagens/barra.png';
+
+  const icone = document.getElementById("icone");
+
+  // Altera a imagem dependendo da imagem atual
+  if (icone.src.includes("imagens/botao-play.png")) {
+      icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
+  } else {
+      icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
+  }
+  audio3.onended = function() {
+    icone.src = "imagens/botao-play.png";
+  }
+
 
 
 });
@@ -212,6 +238,20 @@ document.getElementById("skipButton3").addEventListener('click', function() {
   document.getElementById('img' + contador).src = 'imagens/barra.png';
 
 
+  const icone = document.getElementById("icone");
+
+  // Altera a imagem dependendo da imagem atual
+  if (icone.src.includes("imagens/botao-play.png")) {
+      icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
+  } else {
+      icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
+  }
+  audio4.onended = function() {
+    icone.src = "imagens/botao-play.png";
+  }
+
+
+
 });
 
 
@@ -248,7 +288,7 @@ function updateTime() {
 const audio5 = document.getElementById('audio5');
 
 audio5.addEventListener('timeupdate', function() {
-  const progresso = (audio5.currentTime / audio5.duration) * 50;
+  const progresso = (audio5.currentTime / audio5.duration) * 55;
   barraProgresso.value = progresso;
 });
 
@@ -270,7 +310,7 @@ function updateTime() {
 const txt_r1 = document.getElementById('txt-r1');
 const txt_r2 = document.getElementById('txt-r2');
 
-const opcaoCorreta = 'Shampain';
+const opcaoCorreta = 'Savages';
 
 let opcaoSelecionada = "";
 
