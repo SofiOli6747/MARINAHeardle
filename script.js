@@ -26,22 +26,8 @@ document.getElementById("playButton").addEventListener('click', function() {
   executarComando();
   mudarIcone();
 
-  if (contadorClique == 1){
-    document.getElementById('skipButton3').disabled = true;
-    document.getElementById('skipButton2').disabled = true;
-    document.getElementById('skipButton').disabled = false;
-    document.getElementById('skipButton3').style.opacity = '40%';
-    document.getElementById('skipButton2').style.opacity = '40%';
-    document.getElementById('skipButton').style.opacity = '100%';
-  }
-  if (contadorClique >= 2 || contadorClique === 2 ){
-    document.getElementById('skipButton3').disabled = true;
-    document.getElementById('skipButton2').disabled = false;
-    document.getElementById('skipButton').disabled = true;
-    document.getElementById('skipButton').style.opacity = '40%';
-    document.getElementById('skipButton2').style.opacity = '100%';
-  }
-
+  document.getElementById('skipButton').disabled = false;
+  document.getElementById('skipButton').style.opacity = '100%';
 
 });
 
@@ -310,7 +296,7 @@ function updateTime() {
 const txt_r1 = document.getElementById('txt-r1');
 const txt_r2 = document.getElementById('txt-r2');
 
-const opcaoCorreta = 'Savages';
+const opcaoCorreta = 'The Family Jewels';
 
 let opcaoSelecionada = "";
 
@@ -335,6 +321,8 @@ function mostrarMenu() {
     "Primadonna",
     "Lies",
     "Homewrecker",
+
+    "The Family Jewels",
     
     "Starring Role",
     
@@ -428,7 +416,8 @@ function mostrarMenu() {
     "Pandora's Box",
     "I Love You But I Love Me More",
     "Flowers",
-    "Goodbye"
+    "Goodbye",
+    "CUNTISSIMO"
   ];
   
   const inputTexto = document.getElementById('typebox');

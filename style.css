@@ -20,6 +20,7 @@ body{
 }
 
 
+
 .titulo{
     color: aliceblue;
     position: absolute;
@@ -312,7 +313,7 @@ iframe{
     font-size: 20px;
     position: absolute;
     top: 290px;
-    left: 250px;
+    left: 230px;
 }
 
 .quadradinhos{
